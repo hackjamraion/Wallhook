@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyBehaviour : MonoBehaviour
 {
@@ -40,6 +42,12 @@ public class EnemyBehaviour : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position, new Vector2(vision.target.transform.position.x , transform.position.y), 0.14f);
     }
-    
-    
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag.Equals("Player"))
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
 }

@@ -30,20 +30,22 @@ public class PlayerHook : PlayerBehaviour
             Vector2 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             direction = (target - (Vector2) transform.position).normalized;
         
-            ray = Physics2D.Raycast(transform.position, direction, int.MaxValue, layer.value);
+            ray = Physics2D.Raycast(transform.position, direction, 1000, layer.value);
+            if (ray.collider != null && ray.collider.tag.Equals("NotAWall")) return;
+
             if (ray.collider != null && ray.collider.tag.Equals("Wall"))
             {
                 hook = ray.point;
-              
-                if (ray.distance > hookRange)
+
+                if (ray.distance > hookRange && ray.collider.tag.Equals("Wall"))
                 {
                     cantHook = true;
                     GameObject tempo = Instantiate(hookProjectile, transform.position, Quaternion.identity);
                     tempo.GetComponent<Hook>().searchAngle(hook, transform.gameObject);
                 }
+
                 moveTo = hook;
-                
-            }      
+            }
         }  
 
         if (inHook)

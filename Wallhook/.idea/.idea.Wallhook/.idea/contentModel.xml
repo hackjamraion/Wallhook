@@ -4,9 +4,17 @@
     <e p="C:\Users\Arata Reito\.Rider2018.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Arata Reito\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_Wallhook.1818862338.00" t="ExcludeRecursive" />
     <e p="E:\UnityProject\GitHubUnity\Wallhook\Wallhook" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Editor" t="Include">
+          <e p="Cinemachine2DEditor.cs" t="Include" />
+        </e>
+        <e p="Script" t="Include">
+          <e p="Character.cs" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
+          <e p="Cinemachine2D.cs" t="Include" />
           <e p="Enemy" t="Include">
             <e p="EnemyBehaviour.cs" t="Include" />
             <e p="EnemyVision.cs" t="Include" />
@@ -17,6 +25,76 @@
             <e p="PlayerHook.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
           </e>
+        </e>
+        <e p="Tiled2Unity" t="Include">
+          <e p="Imported" t="Include">
+            <e p="_ReadMe.txt" t="Include" />
+            <e p="lvl2.tiled2unity.xml" t="Include" />
+          </e>
+          <e p="License.txt" t="Include" />
+          <e p="Materials" t="Include">
+            <e p="_ReadMe.txt" t="Include" />
+          </e>
+          <e p="Meshes" t="Include">
+            <e p="_ReadMe.txt" t="Include" />
+          </e>
+          <e p="Prefabs" t="Include">
+            <e p="_ReadMe.txt" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Editor" t="Include">
+              <e p="CustomTiledImporterAttribute.cs" t="Include" />
+              <e p="ICustomTiledImporter.cs" t="Include" />
+              <e p="ImportTiled2Unity.cs" t="Include" />
+              <e p="ImportTiled2Unity.Material.cs" t="Include" />
+              <e p="ImportTiled2Unity.Mesh.cs" t="Include" />
+              <e p="ImportTiled2Unity.Prefab.cs" t="Include" />
+              <e p="ImportTiled2Unity.Texture.cs" t="Include" />
+              <e p="ImportTiled2Unity.Xml.cs" t="Include" />
+              <e p="ImportUtils.cs" t="Include" />
+              <e p="SortingLayerExposedEditor.cs" t="Include" />
+              <e p="SpriteDepthInMapEditor.cs" t="Include" />
+              <e p="Tiled2UnityMenuItems.cs" t="Include" />
+              <e p="TiledAssetPostProcessor.cs" t="Include" />
+            </e>
+            <e p="Runtime" t="Include">
+              <e p="CircleObject.cs" t="Include" />
+              <e p="GameObjectExtensions.cs" t="Include" />
+              <e p="GPUInstancing.cs" t="Include" />
+              <e p="GroupLayer.cs" t="Include" />
+              <e p="ImportBehaviour.cs" t="Include" />
+              <e p="Layer.cs" t="Include" />
+              <e p="Log.cs" t="Include" />
+              <e p="ObjectLayer.cs" t="Include" />
+              <e p="PolygonObject.cs" t="Include" />
+              <e p="PolylineObject.cs" t="Include" />
+              <e p="RectangleObject.cs" t="Include" />
+              <e p="SortingLayerExposed.cs" t="Include" />
+              <e p="SpriteDepthInMap.cs" t="Include" />
+              <e p="TileAnimator.cs" t="Include" />
+              <e p="TiledMap.cs" t="Include" />
+              <e p="TileLayer.cs" t="Include" />
+              <e p="TileObject.cs" t="Include" />
+              <e p="TmxObject.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="shaColorKey-Instanced.shader" t="Include" />
+            <e p="shaColorKey.shader" t="Include" />
+            <e p="shaDefault-Instanced.shader" t="Include" />
+            <e p="shaDefault.shader" t="Include" />
+            <e p="shaDepth-Instanced.shader" t="Include" />
+            <e p="shaDepth.shader" t="Include" />
+            <e p="shaDepthColorKey-Instanced.shader" t="Include" />
+            <e p="shaDepthColorKey.shader" t="Include" />
+            <e p="shaDiffuseDepth-Instanced.shader" t="Include" />
+            <e p="shaDiffuseDepth.shader" t="Include" />
+            <e p="Tiled2Unity.cginc" t="Include" />
+          </e>
+          <e p="Textures" t="Include">
+            <e p="_ReadMe.txt" t="Include" />
+          </e>
+          <e p="Tiled2Unity.export.txt" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
