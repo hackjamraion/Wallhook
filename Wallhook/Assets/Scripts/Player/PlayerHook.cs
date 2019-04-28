@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
 
-public class PlayerHook : PlayerBehaviour
+public class PlayerHook : MonoBehaviour
 {
     private Vector2 hook;
     private Vector2 direction;
-    [SerializeField] private bool inHook;
+    [HideInInspector] public bool inHook;
     private RaycastHit2D ray;
     [SerializeField] private LayerMask layer;
     [SerializeField] Vector2 moveTo = Vector2.zero;
-
-    [SerializeField] private Grid grid;
 
     [Range(0,2)] [SerializeField] private float hookRange;
 
@@ -76,4 +74,5 @@ public class PlayerHook : PlayerBehaviour
     {
         inHook = true;
     }
+    
 }

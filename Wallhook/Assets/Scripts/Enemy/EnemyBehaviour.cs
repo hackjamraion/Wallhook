@@ -34,20 +34,30 @@ public class EnemyBehaviour : MonoBehaviour
     {        
         transform.Translate(direction*speed*Time.deltaTime);
         transform.position = new Vector2(Mathf.Clamp(transform.position.x, min.x, max.x), transform.position.y);
-        if (transform.position.x == max.x) direction = Vector2.left;
-        if (transform.position.x == min.x) direction =Vector2.right;
+        if (transform.position.x == max.x)
+        {
+            direction = Vector2.left;
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+        if (transform.position.x == min.x)
+        {
+            direction =Vector2.right;
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
     }
 
     void DoKamikaze()
     {
-        transform.position = Vector2.MoveTowards(transform.position, new Vector2(vision.target.transform.position.x , transform.position.y), 0.14f);
+        if (transform.position.x < vision.target.transform.position.x) GetComponent<SpriteRenderer>().flipX = true;
+        else GetComponent<SpriteRenderer>().flipX = false;
+        transform.position = Vector2.MoveTowards(transform.position, new Vector2(vision.target.transform.position.x , transform.position.y), 0.24f);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag.Equals("Player"))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(GameManagement.instance.sceneTarget);
         }
     }
 }
